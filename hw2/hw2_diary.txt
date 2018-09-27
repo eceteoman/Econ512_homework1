@@ -1,0 +1,74 @@
+clc
+diary on
+clear all
+main
+
+D_A =
+
+    0.4223
+
+
+D_B =
+
+    0.4223
+
+
+D_0 =
+
+    0.1554
+
+
+sol_broyden =
+
+    1.5989    1.5989
+
+
+Broyden_runtime =
+
+    0.0284
+
+
+solution_Gauss_Seidel =
+
+    1.5989
+    1.5989
+
+
+Gauss_Seidel_runtime =
+
+    0.3158
+
+
+solution_update =
+
+    1.5989
+    1.5989
+
+
+update_runtime =
+
+    0.0048
+
+
+p_a =
+
+  Columns 1 through 12
+
+    1.8671    1.8465    1.8239    1.7995    1.7735    1.7461    1.7176    1.6883    1.6586    1.6287    1.5989    1.5697
+
+  Columns 13 through 16
+
+    1.5411    1.5134    1.4867    1.4612
+
+
+p_b =
+
+  Columns 1 through 12
+
+    1.1481    1.1743    1.2041    1.2378    1.2757    1.3179    1.3646    1.4160    1.4721    1.5331    1.5989    1.6697
+
+  Columns 13 through 16
+
+    1.7453    1.8257    1.9109    2.0008
+
+diary off
