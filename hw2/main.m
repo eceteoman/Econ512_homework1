@@ -48,7 +48,7 @@ update_runtime= toc
 %% Q5
 p_0= ones(2,1);
 price= zeros(2,16);
-error= 1;
+error= 1; 
 iter= 1;
 foriter=0;
 tic;
