@@ -1,3 +1,5 @@
+
+% all is good
 %% Q1
 load('hw3.mat')
 
