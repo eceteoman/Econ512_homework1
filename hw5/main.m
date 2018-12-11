@@ -69,12 +69,14 @@ b=0;
 
 l_gq=@(par)ll_gq(par, X, Y);
 [par_gq, ll_gq] = fmincon(l_gq,par_0,A,b);
+% why do you have just 2 parameters? it should have been 3 for this case
 
 
 % MC:
 
 l_mc=@(par)ll_mc(par, X, Y);
 [par_mc, ll_mc] = fmincon(l_mc,par_0,A,b);
+% parameter estimates are very different, it should have warned you 
 
 %% Question 5
 
