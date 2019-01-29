@@ -1,0 +1,13 @@
+main
+{Index exceeds matrix dimensions.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('valfun', 'C:\Users\berkidem\Documents\512hw\hw6\valfun.m', 13)" style="font-weight:bold">valfun</a> (<a href="matlab: opentoline('C:\Users\berkidem\Documents\512hw\hw6\valfun.m',13,0)">line 13</a>)
+        vqq=v0(:,qq)
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('fminbnd', 'C:\Program Files\MATLAB\R2016b\toolbox\matlab\optimfun\fminbnd.m', 225)" style="font-weight:bold">fminbnd</a> (<a href="matlab: opentoline('C:\Program Files\MATLAB\R2016b\toolbox\matlab\optimfun\fminbnd.m',225,0)">line 225</a>)
+x= xf; fx = funfcn(x,varargin{:});
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('main', 'C:\Users\berkidem\Documents\512hw\hw6\main.m', 38)" style="font-weight:bold">main</a> (<a href="matlab: opentoline('C:\Users\berkidem\Documents\512hw\hw6\main.m',38,0)">line 38</a>)
+            y1=fminbnd (@valfun, 0, y0);
+} 
+diary off

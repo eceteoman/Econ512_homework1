@@ -1,0 +1,27 @@
+function val=valfun(x)
+
+ global v0 y0 p0 delta i j gridp gridy prob
+
+  % interpl command interpolates the value exactly
+  % the way we should when we choose option 'linear':
+  
+%vtil = interp1(kron(gridp, gridy), v0, p0, y0,'linear');
+
+
+if x<0
+    r=-999999999999999999;
+else
+    r=p0*x - 0.2*(x^1.5);
+end
+
+ upty=y0-x;
+ %vqq=zeros(101,1);
+  for qq=1:21
+%     %pp=gridp(j);
+%     %apprv(j)=interp2(gridp, gridy, v0,pp, upty,'linear');
+%    vqq=v0(:,qq)
+     apprv=interp1(gridy', v0(:,1), upty, 'linear')
+      vqq=zeros(101,1);
+  end
+
+val=r+(delta*prob(j,:)*apprv')
