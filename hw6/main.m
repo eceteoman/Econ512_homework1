@@ -1,8 +1,8 @@
 clear all
-
+% use separation into sections with double percent!
 global y0  delta ro mu sigma j gridp gridy prob
 
-%Parameter values given in the question
+%% Parameter values given in the question
 
 delta=0.95;
 mu=0.5;
@@ -20,7 +20,7 @@ N=101;
 
 gridy=0:1:100;
 
-%Value function iteration
+%% Value function iteration
 
 v0=zeros(N,Z);
 
@@ -46,3 +46,4 @@ while dif>tol && iter < maxiter
     v0 = v1;
     iter = iter+1;
 end
+% this does not work
