@@ -1,0 +1,69 @@
+clear all
+
+global v0 beta grid kappa;
+
+% We assign given parameter values.
+
+beta = 1/1.05;
+kappa=10;
+s = 2;
+quality=10;
+
+
+%We create the grid space:
+ 
+grid = 1:1:30;
+grid = grid';
+
+% We set initial value of value function to 0 everywhere.
+
+v0 = zeros(30,30);
+
+% We assign values of convergence criteria
+% and maximum number of allowed iterations.
+
+dif = 1000000;
+iter = 1;
+tol = 0.001;
+maxiter = 100000;
+
+
+% We do a standard value function iteration:
+
+while dif>tol && iter < maxiter
+    
+    for i = 1:30
+        for j=1:30           
+            k0 = grid(i);
+            k1 = fminbnd(@valfun,kl,kh);
+            v1(i) = -valfun(k1);
+            k11(i) = k1;
+        end
+    end
+    
+    dif = norm(v1-v0);
+    v0 = v1;
+    iter = iter+1;
+end
+
+% We calculate the consumption at each k in the grid
+% both computationally and analytically.
+
+for i = 1:n+1
+con(i) = grid(i)^(alpha) - k11(i);
+anacon(i)= (1-alpha*beta)*grid(i)^alpha;
+end
+
+% Finally, we plot the estimated consumption
+% together with the analytical solution.
+
+figure
+scatter(grid,con)
+xlabel('k')
+ylabel('c')
+
+if u1==1
+hold on
+plot(grid, anacon, '-k','Linewidth',3)
+hold off
+end
