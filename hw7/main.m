@@ -1,6 +1,7 @@
 clear all
 
 global v0 p1 p2 w1 w2 beta grid kappa;
+% using global variables with matlab slows it down a lot. 
 
 % We assign given parameter values.
 
@@ -50,3 +51,5 @@ while dif>tol && iter < maxiter
     p2=pp';
     iter = iter+1;
 end
+% this did not converge to the equilibrium. check answer key
+
